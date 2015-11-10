@@ -1,0 +1,114 @@
+{% extends 'SpbSymfonyBundle::layout.html.twig' %}
+
+{% block title %} SymfonySpb - Услуги {% endblock %}
+
+{% block pagebanner%}{{ asset('bundles/spbsymfony/images/banner/services.png') }}{% endblock %}
+{% block pagetitle%}Наши услуги <small> : Мы просто любим своих клиентов</small>{% endblock %}
+{% block spbservices %}active{% endblock %}
+
+{% block content %}
+
+<section id="bodySection">		
+    <div id="wrapper">
+        <div class="container">	
+            <div class="row">
+                <div class="span4">
+                    <div class="thumbnail">
+                        <h4>Web-дизайн</h4>
+                        <h5>Современный дизайн для веб-проектов...</h5>
+                        <ul class="unstyled">
+                            <li>Адаптивный веб-дизайн</li>
+                            <li>Responsive web-design</li>
+                            <li>Twitter bootstrap</li>
+                        </ul>
+                        <p>
+                            <a href="{{ path('spb_details', {'service': 'twitter-bootstrap-дизайн'}) }}" >Подробнее</a>
+                        </p>
+                    </div>
+                    <br/>
+                    <div class="thumbnail">
+                        <h4>Техническая поддержка</h4>
+                        <h5>Техническая поддержка и сопровождение...</h5>
+                        <ul class="unstyled">
+                            <li> Установка Symfony проекта  </li>
+                            <li> Организация тестов PHPUnit</li>
+                            <li> Система контроля версий (git, svn, ...)</li>
+                        </ul>
+                        <p><a href="{{ path('spb_details', {'service': 'symfony-сопровождение'}) }}" >Подробнее</a></p>
+                    </div>
+                    <br/>
+                    <div class="thumbnail">
+                        <h4>Оптимизация web-приложений</h4>
+                        <h5>Высоконагруженные интернет-проекты...</h5>
+                        <ul class="unstyled">
+                            <li> NoSQL системы, акселераторы PHP </li>
+                            <li> Оптимизация Apache</li>
+                            <li> Symfony Cache </li>
+                        </ul>
+                        <p><a href="{{ path('spb_details', {'service': 'symfony-оптимизация'}) }}" >Подробнее</a></p>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="thumbnail">
+                        <h4>Разработка на Symfony</h4>
+                        <h5>Проекты на Symfony 2...</h5>
+                        <ul class="unstyled">
+                            <li> Symfony framework & bundles</li>
+                            <li> Symfony CMF, Symfony CMS </li>
+                            <li> Symfony doctrine </li>
+                        </ul>
+                        <p><a href="{{ path('spb_details', {'service': 'symfony-разработка'}) }}" >Подробнее</a></p>
+                    </div>
+                    <br/>
+                    <div class="thumbnail">
+                        <h4>Обучение Symfony</h4>
+                        <h5>Корпоративные курсы Symfony...</h5>
+                        <ul class="unstyled">
+                            <li> Symfony уроки  </li>
+                            <li> Symfony курсы</li>
+                            <li> Symfony документация </li>
+                        </ul>
+                        <p><a href="{{ path('spb_details', {'service': 'symfony-обучение'}) }}" >Подробнее</a></p>
+                    </div>
+                    <br/>
+                    <div class="thumbnail">
+                        <h4>Open-source</h4>
+                        <h5>Учавствуйте в проектах Symfony...</h5>
+                        <ul class="unstyled">
+                            <li> Symfony - Web framework  </li>
+                            <li> Twig - Template library</li>
+                            <li> Silex - PHP micro-framework </li>
+                        </ul>
+                        <p><a href="{{ path('spb_details', {'service': 'symfony-проекты-opensource'}) }}" >Подробнее</a></p>
+                    </div>                    
+                </div>
+                <div class="span4">
+                    <div class="thumbnail">
+                        <h4>SEO</h4>
+                        <h5>Поисковая оптимизация  ... </h5>
+                        <ul class="unstyled">
+                            <li> SEO продвижение  </li>
+                            <li> SEO оптимизация сайта </li>
+                            <li> Google/Yandex продвижение </li>
+                        </ul>
+                        <p><a href="{{ path('spb_details', {'service': 'seo-поисковая-оптимизация'}) }}" >Подробнее</a></p>
+                    </div>
+                    <br/>
+                    <div class="thumbnail">
+                        <h4>Консультирование по Symfony</h4>
+                        <h5>SymfonySpb отдел консультирования...</h5>
+                        <ul class="unstyled">
+                            <li> Услуги в области ИБ (защиты информации) </li>
+                            <li> Аудит инфраструктуры и архитектуры ИТ</li>
+                            <li> Анализ ИТ-деятельности организации </li>
+                        </ul>
+                        <p><a href="{{ path('spb_details', {'service': 'symfony-консультирование'}) }}" >Подробнее</a></p>
+                    </div>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+parameters:
+#    spb_reality.rss_parser.class: Spb\RealityBundle\Services\RssNews
+
+services:
+#    spb_reality.example:
+#        class: %spb_reality.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+  truncatehtml.twig.extension:
+    class: Radley\TwigExtensionBundle\Extension\TruncateHtmlExtension
+    tags:
+    - { name: twig.extension }

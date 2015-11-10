@@ -1,0 +1,256 @@
+{% extends 'SpbSymfonyBundle::layout.html.twig' %}
+
+{% block title %} SymfonySpb - Главная {% endblock %}
+
+{% block banner %} {% endblock %}
+
+{% block spbhome %}active{% endblock %}
+
+{% block content %}
+
+<section id="carouselSection" style="text-align:center">
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div  style="text-align:center"  class="item active">
+                <div class="wrapper"><img src="{{ asset('bundles/spbsymfony/images/carousel/business_website_templates_1.jpg') }}" alt="business webebsite template">
+                    <div class="carousel-caption">
+                        <h2>Чем мы занимаемся?</h2>
+                        <p>Мы разрабатываем различные интернет приложения на платформе PHP & Symfony, занимаемся их сопровождением и поддержкой. Мы консультируем и проводим корпоротивные тренинги по Symfony 2.</p>
+                        <a href="{{ path('spb_services') }}" class="btn btn-large btn-success">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+            <div  style="text-align:center"  class="item">
+                <div class="wrapper"><img src="{{ asset('bundles/spbsymfony/images/carousel/business_website_templates_2.jpg') }}" alt="business themes">
+                    <div class="carousel-caption">
+                        <h2>Кто мы?</h2>
+                        <p>SymfonySpb - это дружный коллектив творческих людей, которые верят, что знания принадлежат всем, надеются на свой профессионализм и трудолюбие и любят мир Symfony.</p>
+                        <a href="{{ path('spb_about') }}" class="btn btn-large btn-success">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+            <div  style="text-align:center"  class="item">
+                <div class="wrapper"><img src="{{ asset('bundles/spbsymfony/images/carousel/business_website_templates_4.jpg') }}" alt="business themes">
+                    <div class="carousel-caption">
+                        <h2>Сообщество симфонистов</h2>
+                        <p>
+                            В нашей группе Вконтакет Вы можете найти интересную информацию из мира информационных технологий и Symfony.
+                            Мы приветствуем всех в нашем сообществе!
+                        </p>
+                        <a href="https://vk.com/symfonyspb" class="btn btn-large btn-success">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+            <div  style="text-align:center"  class="item">
+                <div class="wrapper"><img src="{{ asset('bundles/spbsymfony/images/carousel/business_website_templates_5.jpg') }}" alt="business themes">
+                    <div class="carousel-caption">
+                        <h2>Нужна помощь?</h2>
+                        <p>
+                            Мы всегда рады прийти на помощь. Если у Вас есть вопросы по сопровождению интернет проекта, Вам нужна консультация по Symfony, напишите или позвоните нам.
+                            
+                        </p>
+                        <a href="{{ path('spb_contacts') }}" class="btn btn-large btn-success">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+</section>
+<!-- Sectionone ends ======================================== -->
+
+<section id="middleSection">
+    <div class="container">
+        <div class="row" style="text-align:center">
+            <div class="span12">
+                <div class="well well-small">
+                    <h4>Мы создаем "интернет-симфонии" для своих друзей.</h4>
+                    <p>Свои симфонии, интернет проекты, мы создаем на PHP платформе Symfony. <a href="http://www.symfony.com"> Symfony </a>- это PHP фреймворк для веб-приложений. Также мы учавствуем в open-source проектах сообщества Symfony, проводим тренинги и консультации по разработке проектов на базе Symfony.<br/><br/></p>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="well well-small">
+                    <h4>
+                        <a href="#" class="popOver" data-placement="top" data-content="  > Symfony framework<br> > Symfony php <br> > Symfony doctrine <br> > Symfony bundles <br> > Symfony CMS " data-original-title="Разработка на symfony 2..." style="display:block; text-decoration:none">
+                            <i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-cogs"></i>
+                            <span><br/>Web-разработка</span>
+                        </a>
+                    </h4>
+                    <a href="{{ path('spb_details', {'service': 'symfony-разработка'}) }}"><small>подробнее...</small></a>
+                </div>
+            </div>                        
+            <div class="span2">
+                <div class="well well-small">
+                    <h4>
+                        <a href="#" class="popOver" data-placement="top" data-content=" > Адаптивный веб-дизайн<br> > Отзывчивый веб-дизайн<br> > Responsive web-design<br> > Twitter bootstrap" data-original-title="Современный веб-дизайн..." style="display:block; text-decoration:none">
+                            <i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-magic"></i>
+                            <span><br/>Web-дизайн</span>
+                        </a>
+                    </h4>
+                    <a href="{{ path('spb_details', {'service': 'twitter-bootstrap-дизайн'}) }}"><small>подробнее...</small></a>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="well well-small">
+                    <h4>
+                        <a href="#" class="popOver" data-placement="top" data-content=" > Поисковая оптимизация<br> > SEO продвижение<br> > SEO оптимизация сайта<br> > Google/Yandex продвижение" data-original-title="Продвижение сайта в..." style="display:block; text-decoration:none">
+                            <i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-link"></i>
+                            <span><br/>SEO</span>
+                        </a>
+                    </h4>
+                    <a href="{{ path('spb_details', {'service': 'seo-поисковая-оптимизация'}) }}"><small>подробнее...</small></a>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="well well-small">
+                    <h4>
+                        <a href="#" class="popOver" data-placement="top" data-content=" > NoSQL системы<br> > Оптимизация Apache<br> > Акселераторы PHP<br> > Symfony Cache" data-original-title="Высоконагруженные системы" style="display:block; text-decoration:none">
+                            <i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-wrench"></i>
+                            <span><br/>Оптимизация</span>
+                        </a>
+                    </h4>
+                    <a href="{{ path('spb_details', {'service': 'symfony-оптимизация'}) }}"><small>подробнее...</small></a>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="well well-small">
+                    <h4>
+                        <a href="#" id="poverone" class="popOver" data-placement="top" data-content=" > Symfony проекты  <br> > Symfony установка  <br> > git, composer, console, ..." data-original-title="Техническое сопровождение..." style="display:block; text-decoration:none">
+                            <i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-beaker"></i>
+                            <span><br/>Сопровождение</span>
+                        </a>
+                    </h4>
+                    <a href="{{ path('spb_details', {'service': 'symfony-сопровождение'}) }}"><small>подробнее...</small></a>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="well well-small">
+                    <h4>
+                        <a href="#" class="popOver" data-placement="top" data-content=" > Symfony курсы<br>> Symfony обучение<br>> Symfony уроки" data-original-title="Корпоративные курсы" style="display:block; text-decoration:none">
+                            <i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-volume-up"></i>
+                            <span><br/>Обучение</span>
+                        </a>
+                    </h4>
+                    <a href="{{ path('spb_details', {'service': 'symfony-обучение'}) }}"><small>подробнее...</small></a>
+                </div>
+            </div>	
+        </div>
+    </div>
+</section>
+<section id="bodySection">
+    <div class="container">
+        <div class="row">
+            <section style="text-align:center; padding:24px 0">
+                <div class="container">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/php.png') }}" alt="PHP" title="PHP" class="img-rounded">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/symfony.png') }}" alt="Symfony" title="Symfony">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/doctrine.png') }}" alt="Doctrine" title="Doctrine">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/mysql.png') }}" alt="MySql">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/postgresql.png') }}" alt="PostgreSQL">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/git.png') }}" alt="Git" title="Twig">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/twig.png') }}" alt="Twig" title="Twig">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/jquery.png') }}" alt="jQuery" title="jQuery">
+                    <img src="{{ asset('bundles/spbsymfony/images/clients/bootstrap2.png') }}" alt="Tweeter Bootstrap2" title="Tweeter Bootstrap2">
+
+                </div>
+            </section>                        
+
+            <div class="span4">
+                <div class="thumbnail">
+                    <h4>Мобильные приложения на Symfony</h4>
+                    <a href="portfolio.html"><img src="{{ asset('bundles/spbsymfony/images/1.jpg') }}" alt="bootstrap business templates"></a>
+                    <p>
+                        <br/>
+                        Мобильный сайт - самый распространенный тип приложений для мобильных устройств. 
+                        Современные смартфоны в состоянии отобразить обычный сайт. Им доступно все то, 
+                        что мы привыкли видеть в десктопных приложениях — поддержка HTML5 делает свое дело. 
+                        Помните, что веб-приложения отлично подходят для стартапа: именно они позволяют 
+                        получить большой результат за маленькие деньги и за небольшой срок. Еще один плюс 
+                        мобильного сайта по сравнению с другими мобильными приложениями – это кроссплатформенность.                        
+                    </p>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="thumbnail">
+                    <h4>Определение Symfony2<small> - <a href="http://fabien.potencier.org/">Fabien Potencier</a></small></h4>
+                    <a href="portfolio.html"><img src="{{ asset('bundles/spbsymfony/images/2.jpg') }}" alt="bootstrap business templates"></a>
+                    <p>
+                        <br/>
+                    <p>Symfony2 представляет собой,</p>
+                    <p>во-первых, <em>многократно используемый набор независимых, полностью разделенных (decoupled) и цельных (cohesive) компонентов PHP для решения задач интернет разработки.</em></p>
+                    <p>Во-вторых, на основе этих компонентов, <em>Symfony2 является полновесным каркасом (фреймворком) для интернет приложений  (full-stack web framework )</em>.</p>
+                    <br/>
+                    <a href="http://fabien.potencier.org/article/49/what-is-symfony2">What is Symfony2?</a> <small> - Fabien Potencier</small>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="thumbnail">
+                    <h4>Компоненты Symfony2</h4>
+                    <a href="portfolio.html"><img src="{{ asset('bundles/spbsymfony/images/3.jpg') }}" alt="bootstrap business templates"></a>
+                    <p>
+                        <br/>
+                    <ul>
+            <a href="http://symfony.com/doc/current/components/dependency_injection/introduction.html">DependencyInjection</a></li>
+                    </ul>
+
+                    <table class="" style="text-align:left">
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><a href="http://symfony.com/doc/current/components/event_dispatcher/introduction.html">EventDispatcher</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/http_foundation/introduction.html">HttpFoundation</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/options_resolver.html">OptionsResolver</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/property_access/introduction.html">PropertyAccess</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/dom_crawler.html">DomCrawler</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/class_loader.html">ClassLoader</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/css_selector.html">CssSelector</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/http_kernel/introduction.html">HttpKernel</a></li>
+                                    <li><a href="https://github.com/symfony/BrowserKit">BrowserKit</a></li>
+                                </ul>                        
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a href="http://symfony.com/doc/current/components/filesystem.html">Filesystem</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/templating.html">Templating</a></li>
+                                    <li><a href="http://symfony.com/doc/current/book/translation.html">Translation</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/serializer.html">Serializer</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/stopwatch.html">Stopwatch</a></li>
+                                    <li><a href="http://symfony.com/doc/current/book/validation.html">Validator</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/security/introduction.html">Security</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/routing/introduction.html">Routing</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/console/introduction.html">Console</a></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a href="http://symfony.com/doc/current/components/process.html">Process</a></li>                       
+                                    <li><a href="http://symfony.com/doc/current/components/config/introduction.html">Config</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/finder.html">Finder</a></li>
+                                    <li><a href="http://symfony.com/doc/2.2/components/locale.html">Locale</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/debug.html">Debug</a></li>
+                                    <li><a href="http://symfony.com/doc/current/components/yaml/introduction.html">Yaml</a><br/>
+                                    <li><a href="http://symfony.com/doc/current/book/forms.html">Form</a></li>   
+                                    <li><a href="http://symfony.com/doc/current/components/intl.html">Intl</a></li>
+                                    <li><a href="https://github.com/symfony/Icu">Icu</a></li>
+                                </ul>                       
+                            </td>
+                        </tr>
+                    </table>
+                    </p>                    
+                </div>
+            </div>
+            </div>
+            <br/>
+        </div>
+    </section>
+<section style="text-align:center; padding:24px 0">
+    <div class="container">
+        <img src="{{ asset('bundles/spbsymfony/images/clients/google.png') }}" alt="Google">&nbsp;&nbsp;        
+        <img src="{{ asset('bundles/spbsymfony/images/clients/twitter.png') }}" alt="Twitter">&nbsp;&nbsp;
+        <img src="{{ asset('bundles/spbsymfony/images/clients/yandex.png') }}" alt="Yandex">
+    </div>        
+</section>
+<!-- body block end======================================== -->
+
+{% endblock %}

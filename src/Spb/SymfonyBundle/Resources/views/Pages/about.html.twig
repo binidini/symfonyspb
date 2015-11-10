@@ -1,0 +1,127 @@
+{% extends 'SpbSymfonyBundle::layout.html.twig' %}
+
+{% block title %} SymfonySpb - О нас {% endblock %}
+
+{% block pagebanner%}{{ asset('bundles/spbsymfony/images/banner/aboutus.png') }}{% endblock %}
+{% block pagetitle%}О нас <small> : Мы поможем восстановить порядок в вашей вселенной.</small>{% endblock %}
+{% block spbabout %}active{% endblock %}
+
+{% block content %}
+
+<section id="bodySection">	
+	<div class="container">	
+	<div class="row">
+		<div class="span3">
+			<div class="well well-small" style="text-align:left">
+				<h5>Добро пожаловать!</h5>
+				
+				SymfonySpb разрабатывает, сопровождает и поддерживает интернет-проекты,
+                                разработанных на базе PHP/Symfony.
+                                
+				Также мы занимаемся обучением и консультированием IT-компаний<br/><br/>
+                                <strong>Надеемся на плодотворное и долгосрочное сотрудничество!</strong>
+			</div>
+			<br/>
+			<h4>Цитаты</h4>
+			<ul class="media-list">
+			   <li class="media well well-small">
+					<a class="pull-left" href="#">
+					  <img class="media-object" src="{{ asset ('bundles/spbsymfony/images/img64x64.png') }}" alt="bootstrap business template"/>
+					</a>
+					<div class="media-body">
+					  Чужое доверие это не бонус. Это ответственность.
+					</div>
+			  </li>
+			   <li class="media well well-small">
+					<a class="pull-left" href="#">
+					  <img class="media-object" src="{{ asset ('bundles/spbsymfony/images/img64x64.png') }}" alt="bootstrap business template"/>
+					</a>
+					<div class="media-body">
+					  Любое достижение начинается с решения попробовать.
+                                          <a class="pull-right" href="#"><strong>Михаил Барышников</strong></a>
+					</div>
+			  </li>			  
+			   <li class="media well well-small">
+					<a class="pull-left" href="#">
+					  <img class="media-object" src="{{ asset ('bundles/spbsymfony/images/img64x64.png') }}" alt="bootstrap business template"/>
+					</a>
+					<div class="media-body">
+					  Самая большая глупость — это делать то же самое и надеяться на другой результат.
+                                          <a class="pull-right" href="#"><strong>Альберт Эйнштейн</strong></a>
+					</div>
+			  </li>
+			  <li class="media well well-small">
+					<a class="pull-left" href="#">
+					  <img class="media-object" src="{{ asset ('bundles/spbsymfony/images/img64x64.png') }}" alt="bootstrap business template"/>
+					</a>
+					<div class="media-body">
+					  Наш большой недостаток в том, что мы слишком быстро опускаем руки. Наиболее верный путь к успеху – все время пробовать еще один раз. 
+                                          <a class="pull-right" href="#"><strong>Томас Эдисон</strong></a>
+					</div>
+			  </li>
+			</ul>
+
+		</div>
+		<div class="span9">
+                    <div class="well well-small" style="text-align:left">
+                        <h3>SymfonySpb</h3>
+                        <p><img src="{{ asset ('bundles/spbsymfony/images/carousel/business_website_templates_3.jpg') }}" alt="business templates" /></p>
+                        <p>
+                            Основные направления деятельности создание, поддержка и сопровождение интернет проектов, разработанных на базе PHP/Symfony.
+                            Мы занимаемся проектированием интерфейсов, интернет-программированием разработкой баз данных, систем автоматизации и управления.
+                        </p>
+                        <p>
+                            В нашей компании собраны профессионалы по Symfony, которые проводят обучение и консультрование
+                            IT-компаний.
+                        </p>
+                        <p>
+                            У нас в распоряжении есть все необходимые материальные и интеллектуальные ресурсы для создания высококачественных продуктов, связанных с веб-дизайном и веб-проектированием, а также для обеспечения качественного сервиса.
+                        </p>
+                        <br/>			
+		<ul class="media-list">
+		  <li class="media well well-small">
+				<a class="pull-left" href="#">
+				  <img class="media-object" src="{{ asset ('bundles/spbsymfony/images/img185x165.png') }}" alt="bootstrap business template"/>
+				</a>
+				<div class="media-body">
+				  <h4 class="media-heading">Делать то, что любишь</h4>
+                                  Я убеждён, что единственная вещь, которая помогла мне продолжать дело была то, что я любил своё дело. Вам надо найти то, что вы любите. И это так же верно для работы, как и для отношений. Ваша работа заполнит большую часть жизни и единственный способ быть полностью довольным – делать то, что по-вашему является великим делом. И единственный способ делать великие дела – любить то, что вы делаете.
+                                  <br/>
+                                  <small>Речь перед выпускниками Стэнфорда, 2005 год</small><a class="pull-right" href="#"><strong>Стив Джобс</strong></a>
+                                  <br/>
+				</div>
+		  </li>
+		  <li class="media well well-small">
+				<a class="pull-left" href="#">
+				  <img class="media-object" src="{{ asset ('bundles/spbsymfony/images/img185x165.png') }}" alt="bootstrap business template"/>
+				</a>
+				<div class="media-body">
+				  <h4 class="media-heading">Творчество</h4>
+                                    Творчество — это просто создание связей между вещами. Когда творческих людей спрашивают, как они что-то сделали, они чувствуют себя немного виноватыми, потому что они не сделали ничего на самом деле, а просто заметили. Это становится им понятно со временем. Они смогли связать разные кусочки своего опыта и синтезировать что-то новое. Это происходит потому, что они пережили и увидели больше, чем другие, или потому, что они больше об этом размышляют.
+                                    <br/>
+                                    <small> Wired, 1996 год</small><a class="pull-right" href="#"><strong>Стив Джобс</strong></a>
+                                    <br/>
+				</div>
+		  </li>
+		  <li class="media well well-small">
+				<a class="pull-left" href="#">
+				  <img class="media-object" src="{{ asset ('bundles/spbsymfony/images/img185x165.png') }}" alt="bootstrap business template"/>
+				</a>
+				<div class="media-body">
+				  <h4 class="media-heading">Mementō Morī</h4>
+                                     Последние 33 года я каждое утро смотрел в зеркало и спрашивал себя: «Если сегодня будет последним днем в моем жизни, буду ли я делать то, что запланировал на сегодня?»
+                                    <br/><br/>
+                                    Помнить, что я скоро умру, — великолепный инструмент, который помог мне принять все самые важные решения в жизни. Мысль о скорой смерти — лучший способ избавиться от иллюзии, что тебе есть что терять. Ты уже будто голенький, и нет причины не следовать за своим сердцем. Смерть — это лучшее изобретение жизни».
+                                    <br/>
+                                    <small>Речь перед выпускниками Стэнфорда, 2005 год</small><a class="pull-right" href="#"><strong>Стив Джобс</strong></a>
+                                    <br/>
+				</div>
+		  </li>
+		</ul>			
+		</div>
+		</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

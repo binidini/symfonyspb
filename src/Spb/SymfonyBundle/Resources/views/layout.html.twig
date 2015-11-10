@@ -1,0 +1,183 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('bundles/spbsymfony/css/bootstrap.min.css') }}" type="text/css" media="screen"/>
+<link rel="stylesheet" href="{{ asset('bundles/spbsymfony/css/bootstrap-responsive.min.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('bundles/spbsymfony/css/font-awesome.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('bundles/spbsymfony/css/base.css') }}" type="text/css">
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="{{ asset ('bundles/spbsymfony/js/jquery-1.8.3.min.js') }}"></script>
+<script src="{{ asset ('bundles/spbsymfony/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset ('bundles/spbsymfony/js/bootstrap-tooltip.js') }}"></script>
+<script src="{{ asset ('bundles/spbsymfony/js/bootstrap-popover.js') }}"></script>
+<script src="{{ asset ('bundles/spbsymfony/js/business_ltd_1.0.js') }}"></script>
+
+<script type="text/javascript">
+$('#sform').submit(function(e) {
+    var url = $(this).attr("action");
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: $(this).serialize(),
+        dataType: "json",
+        success: function(data){
+            alert(data.msg);
+        }
+    });
+    return false;
+});
+</script>
+
+{% endblock %}
+
+{% block body %}
+<section id="headerSection">
+    <div class="container">
+        <div class="navbar">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a class="brand" href="{{ path('spb_home')}}"> Symfony <img src="{{ asset('bundles/spbsymfony/images/symfony.spb.logo.png') }}"> <small>  Spb</small></a></h1>
+                <div class="nav-collapse collapse">
+                    <ul class="nav pull-right">
+                        <li class="{% block spbhome %}{% endblock %}"><a href="{{ path('spb_home') }}">Главная</a></li>
+                        <li class="{% block spbservices %}{% endblock %}"><a href="{{ path('spb_services') }}">Услуги</a></li>  
+                        <li class="{% block spbabout %}{% endblock %}"><a href="{{ path('spb_about') }}">О компании</a></li>
+                        <li class="{% block spbblog %}{% endblock %}"><a href="https://vk.com/symfonyspb">Симфонисты</a></li>
+                        <li class="{% block spbcontacts %}{% endblock %}"><a href="{{ path('spb_contacts') }}">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Header Ends================================================ -->
+
+{% block banner %}
+<!-- Page banner -->
+<section id="bannerSection" style="background:url({% block pagebanner%}{{ asset('bundles/spbsymfony/images/banner/contact.png') }}{% endblock %}) no-repeat center center #000;">
+	<div class="container" >	
+		<h1 id="pageTitle">{% block pagetitle%}SymfonySpb <small> :сделаем мир лучше</small>{% endblock %}
+		<span class="pull-right toolTipgroup">
+			<a href="https://www.facebook.com/groups/symfonyspb" data-placement="top" data-original-title="Мы в facebook"><img style="width:45px" src="{{ asset('bundles/spbsymfony/images/facebook.png') }}" alt="Facebook" title="Facebook"></a>
+			<a href="https://twitter.com/symfonyspb" data-placement="top" data-original-title="Мы в twitter"><img style="width:45px" src="{{ asset('bundles/spbsymfony/images/twitter.png') }}" alt="Twitter" title="Twitter"></a>
+			<a href="http://vk.com/symfonyspb" data-placement="top" data-original-title="Мы Вконтакте"><img style="width:45px" src="{{ asset('bundles/spbsymfony/images/vkontakte.png') }}" alt="Вконтакте" title="Вконтакте"></a>
+		</span>
+		</h1>
+	</div>
+</section> 
+<!-- Page banner end -->
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+<!-- Footer
+  ================================================== -->
+<section id="footerSection">
+    <div class="container">
+        <footer class="footer well well-small">
+            <div class="row-fluid">
+                <div class="span4">
+                    <h4>Отзывы</h4>
+                    <h5><a href="http://www.rosreal.com">Росреал</a></h5>
+                    <em>
+                        " Мне очень понравилась слаженная работы SymfonySpb над нашим сайтом. Также хочу отметить оперативную работу по поддержке."
+                    </em>
+                    <small>- Алексей Росин - управляющий риэлторской компании "Росреал"</small>
+                    <br/><br/>
+                    <h5><a href="http://www.viktis.ru">Виктис</a></h5>
+                    <em>
+                        " Могу подтвердить профессионализм сотрудников компании SymfonySpb. Мы получили необходимое для бизнеса приложение в кратчайшие сроки и отличного качества."
+                    </em>
+                    <small>- Владимир Исаков - ген. директор ООО "Виктис"</small>
+                    
+
+                </div>
+                <div class="span5">
+                    <script type="text/javascript" src="//vk.com/js/api/openapi.js?120"></script>
+
+                    <!-- VK Widget -->
+                    <div id="vk_groups"></div>
+                    <script type="text/javascript">
+                        VK.Widgets.Group("vk_groups", {mode: 2, width: "300", height: "400"}, 56135401);
+                    </script>
+                </div>
+
+                <div class="span3">
+                    <h4>Приезжайте к нам</h4>
+                    <address style="margin-bottom:15px;">
+                        <strong><a href="{{ path('spb_home') }}" title="SymfonySpb"><i class=" icon-home"></i> SymfonySpb </a></strong><br>
+                        Россия, г. Санкт-Петербург,<br/>
+                        Пироговская набережная, 21А,<br/>
+                        БЦ "НОБЕЛЬ", офис 68<br/>
+                    </address>
+                    Phone: <i class="icon-phone-sign"></i> &nbsp; +7(952)246-23-08 <br>
+                    Email: <a href="mailto:info@symfony.spb.ru" title="SymfonySpb email"><i class="icon-envelope-alt"></i> info@symfony.spb.ru</a><br/>
+                    Link: <a href="{{ path('spb_home') }}" title="SymfonySpb web site"><i class="icon-globe"></i> symfony.spb.ru</a><br/><br/>
+                    <h5>Быстрый переход</h5>	
+                    <a href="{{ path('spb_services') }}" title="Услуги"><i class="icon-cogs"></i> Услуги </a><br/>
+                    <a href="{{ path('spb_about') }}" title="О нас"><i class="icon-info-sign"></i> О нас </a><br/>
+                    <a href="{{ path('spb_contacts') }}" title="Контакты"><i class="icon-question-sign"></i> Поддержка </a><br/>
+
+                    <h5>Подписка</h5>	
+                    <div style="font-size:2.5em;">
+                        <a href="https://www.facebook.com/groups/symfonyspb" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a> 
+                        <a href="https://twitter.com/symfonyspb" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
+                        <a href="https://vk.com/symfonyspb" style="display:inline-block;width:1em" > <i class="icon-bold"> </i> </a>
+                    </div>
+                </div>
+            </div>
+
+            <p style="padding:18px 0 44px">Symfony.Spb.Ru</p>
+            
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21862471 = new Ya.Metrika({id:21862471,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21862471" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- Google tracker -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42632966-1', 'symfony.spb.ru');
+  ga('send', 'pageview');
+
+</script>
+<!-- /End Google Tracker -->
+
+        </footer>
+    </div><!-- /container -->
+</section>
+<a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i> Наверх</a>
+{% endblock %}

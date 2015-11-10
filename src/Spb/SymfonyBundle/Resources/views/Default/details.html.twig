@@ -1,0 +1,113 @@
+{% extends 'SpbSymfonyBundle::layout.html.twig' %}
+
+{% block pagebanner%}{{ asset('bundles/spbsymfony/images/banner/details.png') }}{% endblock %}
+{% block pagetitle%}Наши услуги{% endblock %}
+{% block spbservices %}active{% endblock %}
+
+{% block title %}
+    {% if service == 'twitter-bootstrap-дизайн' %}
+        SymfonySpb - веб-дизайн
+    {% elseif service == 'symfony-оптимизация' %}
+        SymfonySpb - symfony оптимизация высоконагруженных интернет приложений
+    {% elseif service == 'seo-поисковая-оптимизация' %}
+        SymfonySpb - seo поисковая оптимизация
+    {% elseif service == 'symfony-сопровождение' %}
+        SymfonySpb - техническая поддержка и сопровождение интернет-проектов
+    {% elseif service == 'symfony-обучение' %}
+        SymfonySpb - обучение Symfony, корпоративные курсы
+    {% elseif service == 'symfony-консультирование' %}
+        SymfonySpb - консльтирование по Symfony
+    {% elseif service == 'symfony-проекты-opensource' %}
+        SymfonySpb - Symfony opensource проекты
+    {% else %}
+        SymfonySpb - разработка интернет проектов, веб приложение на Symfony
+    {% endif %}
+{% endblock %}
+    
+{% block description%}
+    {% if service == 'twitter-bootstrap-дизайн' %}
+        {{ parent() }}
+    {% elseif service == 'symfony-оптимизация' %}
+        {{ parent() }}
+    {% elseif service == 'seo-поисковая-оптимизация' %}
+        {{ parent() }}
+    {% elseif service == 'symfony-сопровождение' %}
+        "SymfonySpb - cервис по доработке сайтов, интранет-порталов, интернет-магазинов, приложений для социальных сетей"
+    {% elseif service == 'symfony-обучение' %}
+        {{ parent() }}
+    {% elseif service == 'symfony-консультирование' %}
+        {{ parent() }}
+    {% elseif service == 'symfony-проекты-opensource' %}
+        {{ parent() }}
+    {% else %}
+        {{ parent() }}
+    {% endif %}        
+{% endblock %}
+        
+{% block keywords %}
+    {% if service == 'twitter-bootstrap-дизайн' %}
+        {{ parent() }}
+    {% elseif service == 'symfony-оптимизация' %}
+        {{ parent() }}
+    {% elseif service == 'seo-поисковая-оптимизация' %}
+        {{ parent() }}
+    {% elseif service == 'symfony-сопровождение' %}
+        "symfony программный аутсорсинг,услуги программирования symfony ,доработка сайтов symfony,symfony поддержка интернет-магазинов,улучшения интранет-порталов symfony,развитие приложений symfony"
+    {% elseif service == 'symfony-обучение' %}
+        {{ parent() }}
+    {% elseif service == 'symfony-консультирование' %}
+        {{ parent() }}
+    {% elseif service == 'symfony-проекты-opensource' %}
+        {{ parent() }}
+    {% else %}
+        {{ parent() }}
+    {% endif %}         
+{% endblock %}
+    
+    
+{% block content %}
+<section id="bodySection">
+    <div class="container">					
+        <div class="row">
+            <!-- Sidebar comumn -->
+            <div class="span3">
+                <div class="well well-small">
+                    <h4>SymfonySpb службы</h4>
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li class="{% if service == 'symfony-разработка' %}active{% endif %}"><a href="{{ path('spb_details', {'service': 'symfony-разработка'}) }}">Web-разработка</a></li>
+                        <li class="{% if service == 'twitter-bootstrap-дизайн' %}active{% endif %}"><a href="{{ path('spb_details', {'service': 'twitter-bootstrap-дизайн'}) }}">Web-дизайн</a></li>
+                        <li class="{% if service == 'symfony-оптимизация' %}active{% endif %}"><a href="{{ path('spb_details', {'service': 'symfony-оптимизация'}) }}">Оптимизация web-приложений</a></li>
+                        <li class="{% if service == 'seo-поисковая-оптимизация' %}active{% endif %}"><a href="{{ path('spb_details', {'service': 'seo-поисковая-оптимизация'}) }}">SEO - поисковая оптимизация</a></li>
+                        <li class="{% if service == 'symfony-сопровождение' %}active{% endif %}"><a href="{{ path('spb_details', {'service': 'symfony-сопровождение'}) }}">Техническое сопровождение</a></li>
+                        <li class="{% if service == 'symfony-обучение' %}active{% endif %}"><a href="{{ path('spb_details', {'service': 'symfony-обучение'}) }}">Обучение Symfony</a></li>
+                        <li class="{% if service == 'symfony-консультирование' %}active{% endif %}"><a href="{{ path('spb_details', {'service': 'symfony-консультирование'}) }}">Консультирование по Symfony</a></li>
+                        <li class="{% if service == 'symfony-проекты-opensource' %}active{% endif %}"><a href="{{ path('spb_details', {'service': 'symfony-проекты-opensource'}) }}">Opensource проекты</a></li>                
+                    </ul>
+                </div>
+            </div>
+
+            <div class="span9">
+
+                {% if service == 'twitter-bootstrap-дизайн' %}
+                    {% include 'SpbSymfonyBundle:Pages:symfony-webdesign.html.twig' %}
+                {% elseif service == 'symfony-оптимизация' %}
+                    {% include 'SpbSymfonyBundle:Pages:symfony-optimization.html.twig' %}
+                {% elseif service == 'seo-поисковая-оптимизация' %}
+                    {% include 'SpbSymfonyBundle:Pages:symfony-seo.html.twig' %}
+                {% elseif service == 'symfony-сопровождение' %}
+                    {% include 'SpbSymfonyBundle:Pages:symfony-maintenance.html.twig' %}
+                {% elseif service == 'symfony-обучение' %}
+                    {% include 'SpbSymfonyBundle:Pages:symfony-trainings.html.twig' %}
+                {% elseif service == 'symfony-консультирование' %}
+                    {% include 'SpbSymfonyBundle:Pages:symfony-consulting.html.twig' %}
+                {% elseif service == 'symfony-проекты-opensource' %}
+                    {% include 'SpbSymfonyBundle:Pages:symfony-opensource.html.twig' %}
+                {% else %}
+                    {% include 'SpbSymfonyBundle:Pages:symfony-development.html.twig' %}
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

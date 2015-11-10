@@ -1,0 +1,24 @@
+{% extends 'SpbSymfonyBundle::layout.html.twig' %}
+
+{% block title %} SymfonySpb - Услуги {% endblock %}
+
+{% block pagebanner%}{{ asset('bundles/spbsymfony/images/banner/docs.png') }}{% endblock %}
+{% block pagetitle%}База знаний <small> :Знание существует для того, чтобы его распространять</small>{% endblock %}
+{% block spbdocs %}active{% endblock %}
+
+{% block content %}
+<section id="middleSection">
+<div class="container">
+    <div class="row" style="text-align:center">
+        <div class="span12">
+            <div class="well well-small">
+                <h4>Раздел в разработке</h4>
+                <p>Данный раздел будет готов в ближайшее время.<br/>Мы прикладываем все усилия, чтобы запустить раздел, как можно скорее. </p>
+                <br/>
+                <br/>
+            </div>				
+        </div>
+    </div>
+</div>
+</section>
+{% endblock %}

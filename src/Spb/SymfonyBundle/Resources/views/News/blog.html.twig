@@ -1,0 +1,17 @@
+<h4>Новости</h4>
+<ul class="media-list">
+{% for item in items %}
+        <li class="media">
+            <a class="pull-left" href="http://blog.symfony.spb.ru">
+                <img class="media-object" src="{{ asset ('bundles/spbsymfony/images/img64x64.png') }}" alt="bootstrap business template">
+            </a>
+            <div class="media-body">
+                <h5 class="media-heading">{{ item.title }}</h5>
+                
+                <small>
+                    <em>{{ item.updated |date('d-m-Y H:i') }}</em><br/>
+                    <a href="http://blog.symfony.spb.ru">подробнее ...</a>
+                </small>
+            </div>
+        </li>
+{% endfor %}

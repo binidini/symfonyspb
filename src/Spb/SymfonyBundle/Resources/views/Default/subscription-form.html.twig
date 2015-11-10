@@ -1,0 +1,6 @@
+{{ form_start(form, {'action': path('spb_subscribe'), 'attr': {'id': 'sform'} }) }}
+    <div  class="input-append">
+        {{ form_widget(form.email, {'attr': {'id': 'appendedInputButton', 'placeholder': 'Ваше e-mail'}}) }}
+        <button id='sbutt' class="btn btn-warning" type="submit" data-loading-text="Loading...">послать </button>
+    </div>
+{{ form_end(form) }}

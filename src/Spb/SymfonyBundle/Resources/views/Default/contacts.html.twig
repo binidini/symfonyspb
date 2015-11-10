@@ -1,0 +1,99 @@
+{% extends 'SpbSymfonyBundle::layout.html.twig' %}
+
+{% block title %} SymfonySpb - О нас {% endblock %}
+
+{#% block pagebanner%}{{ asset('bundles/spbsymfony/images/banner/contact.png') }}{% endblock %}
+{% block pagetitle%}Контакты <small> :Лицо фирмы начинается здесь</small>{% endblock %#}
+{% block banner %} {% endblock %}
+{% block spbcontacts %}active{% endblock %}
+
+
+{% block content %}
+<section id="mapSection"> 
+    <div id="myMap" style="height:400px">
+        <!-- please edit in (js code which is available in the foote section) longitude and longitude of your location  -->
+    </div>	
+</section>
+
+
+<section id="bodySection"> 	
+    <div class="container">					
+        <div class="row">
+            <div class="span4">
+                <h3>  Адрес </h3>	
+                194044, Россия, Санкт-Петербург <br/>
+                Пироговская набережная, 21А,<br/>
+                БЦ "НОБЕЛЬ", офис 68<br/><br/>
+                info@symfony.spb.ru<br/>
+                Тел.: +7 (952) 246-23-08<br/>
+            </div>
+            <div class="span8">
+                <h3>Напишите нам</h3>
+                {% for flashMessage in app.session.flashbag.get('notice') %}
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        {{ flashMessage }}
+                    </div>
+                {% endfor %}
+                {{ form_start(form, {'action': path('spb_contacts'), 'attr': {'class': 'form-horizontal  text-error'} } ) }}
+                    {{ form_errors(form) }}
+                  <fieldset>
+                    <div class="control-group">
+                        {{ form_errors(form.name) }}
+                        {{ form_widget(form.name, {'attr': {'class': 'input-xxlarge', 'placeholder': 'Ваше имя'} }) }}
+                    </div>
+
+                    <div class="control-group">
+                        {{ form_errors(form.email) }}
+                        {{ form_widget(form.email, {'attr': {'class': 'input-xxlarge', 'placeholder': 'Ваш e-mail'} }) }}
+                    </div>
+
+                    <div class="control-group">
+                        {{ form_errors(form.subject) }}
+                        {{ form_widget(form.subject, {'attr': {'class': 'input-xxlarge', 'placeholder': 'Тема письма'} }) }}
+                    </div>
+
+                    <div class="control-group">
+                        {{ form_errors(form.msg) }}
+                        {{ form_widget(form.msg, {'attr': {'class': 'input-xxlarge', 'rows': '12'} }) }}
+                    </div>
+                
+                    <button class="btn btn-large" type="submit"> <i class="icon-envelope"></i> Посллать сообщение</button>
+                  </fieldset>
+                {{ form_end(form) }}                
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+<!-- Google map jquery files -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="{{ asset('bundles/spbsymfony/js/jquery.gmap.js') }}"></script>
+<script>
+        // Google map data ==============================================================================
+    $(document).ready(function(){
+        $("#myMap").gMap({ controls: false,
+                                            scrollwheel: false,
+                    draggable: true,
+            markers: [{ latitude: 59.965891,  		//your company location latitude 
+                                    longitude: 30.338681,		//your company location longitude
+                                    icon: { image: "http://www.google.com/mapfiles/marker.png",
+                                                    iconsize: [42, 48],
+                                                    iconanchor: [42,48],
+                                                    infowindowanchor: [14, 0] } },
+                                ],
+            icon: { image: "http://www.google.com/mapfiles/marker.png", 
+                            iconsize: [28, 48],
+                            iconanchor: [14, 48],
+                            infowindowanchor: [14, 0] },
+            latitude: 59.965891,
+            longitude: 30.338681,
+            zoom: 16, });
+    });
+</script>
+	
+{% endblock %}

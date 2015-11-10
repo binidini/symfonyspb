@@ -1,0 +1,58 @@
+spb_home:
+    pattern: /
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'SpbSymfonyBundle:Pages:index.html.twig'
+        maxAge: 86400
+        sharedMaxAge: 86400
+        private: false    
+
+spb_services:
+    pattern: /symfony-2
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'SpbSymfonyBundle:Pages:services.html.twig'
+        maxAge: 86400
+        sharedMaxAge: 86400
+        private: false    
+        
+spb_about:
+    pattern: /symfony-php
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'SpbSymfonyBundle:Pages:about.html.twig'
+        maxAge: 86400
+        sharedMaxAge: 86400
+        private: false           
+        
+spb_contacts:
+    pattern: /symfony
+    defaults:
+        _controller: SpbSymfonyBundle:Default:message    
+        
+spb_docs:
+    pattern: /symfony-документация
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'SpbSymfonyBundle:Pages:docs.html.twig'
+        maxAge: 86400
+        sharedMaxAge: 86400
+        private: false         
+        
+spb_details:
+    pattern: /symfony-framework/{service}/
+    defaults:
+        _controller: SpbSymfonyBundle:Default:service
+        maxAge: 86400
+        sharedMaxAge: 86400
+        private: false
+    
+spb_subscribe:
+    pattern: /symfony-1.4
+    defaults:
+        _controller: SpbSymfonyBundle:Default:subscribe
+        
+#spb_news:
+#    pattern: /news
+#    defaults:
+#        _controller: SpbSymfonyBundle:News:news

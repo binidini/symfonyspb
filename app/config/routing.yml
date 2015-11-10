@@ -1,0 +1,4 @@
+spb_symfony:
+    resource: "@SpbSymfonyBundle/Resources/config/routing.yml"
+    prefix:   /
+

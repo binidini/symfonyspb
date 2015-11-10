@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}SymfonySpb{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content={% block keywords %}"symfony, symfony 2, symfony2, symfony php, symfony doctrine, symfony framework, symfony документация, symfony 2 документация, symfony 2  doctrine, symfony bundles, фреймворк symfony, framework symfony, уроки symfony, cms symfony 2, symfony php фреймворк, симфони фреймворк, разработка на symfony, разработка на симфони, symphony, symfony framework, symfony фреймворк, symfony курсы, symfony обучение, symfony консультации, symfony разработка, разработка на symfony2"{% endblock %} />
+        <meta name="description" content={% block description %}"SymfonySpb разрабатывает приложения на основе Symfony framework, осуществляет поддержку и проводить тренинги"{% endblock %}>
+        <meta name="author" content="SymfonySpb - Denis Manilo">
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->        
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
